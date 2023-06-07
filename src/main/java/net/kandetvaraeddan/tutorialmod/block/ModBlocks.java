@@ -37,6 +37,10 @@ public class ModBlocks {
             () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModTab.TUTORIAL_TAB);
+    public static final RegistryObject<Block> EXPERIENCE_ICE_BLOCK = registerBlock("experience_ice",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.ICE)
+                    .strength(3f).requiresCorrectToolForDrops(),
+                    UniformInt.of(8, 17)), ModCreativeModTab.TUTORIAL_TAB);
 
 
 
