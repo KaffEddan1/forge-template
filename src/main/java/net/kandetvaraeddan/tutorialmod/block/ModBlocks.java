@@ -3,6 +3,7 @@ package net.kandetvaraeddan.tutorialmod.block;
 import net.kandetvaraeddan.tutorialmod.TutorialMod;
 import net.kandetvaraeddan.tutorialmod.item.ModCreativeModTab;
 import net.kandetvaraeddan.tutorialmod.item.ModItems;
+import net.kandetvaraeddan.tutorialmod.item.custom.ZirconLampBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -32,6 +33,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModTab.TUTORIAL_TAB);
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModTab.TUTORIAL_TAB);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
