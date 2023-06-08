@@ -1,4 +1,4 @@
-package net.kandetvaraeddan.tutorialmod.item.custom;
+package net.kandetvaraeddan.tutorialmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
