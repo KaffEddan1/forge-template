@@ -2,16 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:mossy_cobblestone"
     },
     "X": {
-      "tag": "minecraft:dirt"
+      "item": "minecraft:cobblestone"
+    },
+    "Y": {
+      "item": "minecraft:light_blue_dye"
     }
   },
   "pattern": [
-    "X#X",
-    "#X#",
-    "X#X"
+    "XXX",
+    "Y#Y",
+    "XXX"
   ],
   "result": {
     "item": "tutorialmod:experience_ice"

@@ -36,15 +36,18 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
-            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops()
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(6f)
                     .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> EXPERIENCE_ICE_BLOCK = registerBlock("experience_ice",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.ICE)
-                    .strength(3f).requiresCorrectToolForDrops(),
+                    .requiresCorrectToolForDrops().strength(0.5f),
                     UniformInt.of(8, 17)), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> FOOD_TABLE = registerBlock("food_table",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops()
+                    .strength(2f)), ModCreativeModeTab.TUTORIAL_TAB);
 
 
 

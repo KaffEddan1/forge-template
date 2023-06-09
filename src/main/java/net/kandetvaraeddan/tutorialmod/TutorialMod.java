@@ -3,6 +3,8 @@ package net.kandetvaraeddan.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.kandetvaraeddan.tutorialmod.block.ModBlocks;
 import net.kandetvaraeddan.tutorialmod.item.ModItems;
+import net.kandetvaraeddan.tutorialmod.painting.ModPaintings;
+import net.kandetvaraeddan.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,13 +26,18 @@ public class TutorialMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

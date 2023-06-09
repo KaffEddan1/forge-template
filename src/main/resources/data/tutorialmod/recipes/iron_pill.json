@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "tutorialmod:fish_oil"
+    }
+  ],
+  "result": {
+    "item": "tutorialmod:iron_pill",
+    "count": 3
+  }
+}

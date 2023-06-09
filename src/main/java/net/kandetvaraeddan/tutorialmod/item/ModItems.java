@@ -3,6 +3,9 @@ package net.kandetvaraeddan.tutorialmod.item;
 import net.kandetvaraeddan.tutorialmod.TutorialMod;
 import net.kandetvaraeddan.tutorialmod.block.ModBlocks;
 import net.kandetvaraeddan.tutorialmod.item.custom.EightBallItem;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -25,6 +28,18 @@ public class ModItems {
     public static final RegistryObject<Item> BLUEBERRY =  ITEMS.register("blueberry",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
                     .food(new FoodProperties.Builder().nutrition(2).saturationMod(2f).build())));
+    public static final RegistryObject<Item> IRON_PILL =  ITEMS.register("iron_pill",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
+                    .food(new FoodProperties.Builder().effect(new MobEffectInstance(MobEffects.REGENERATION, 40), 200)
+                            .nutrition(6).saturationMod(6f).build())));
+    public static final RegistryObject<Item> HEALING_PASTE =  ITEMS.register("healing_paste",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
+                    .food(new FoodProperties.Builder().alwaysEat().effect(new MobEffectInstance(MobEffects.REGENERATION, 100), 200)
+                            .nutrition(2).saturationMod(2f).build())));
+    public static final RegistryObject<Item> FISH_OIL =  ITEMS.register("fish_oil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
+                    .food(new FoodProperties.Builder().alwaysEat().effect(new MobEffectInstance(MobEffects.CONFUSION, 200), 200)
+                    .nutrition(1).saturationMod(1f).build())));
     public static final RegistryObject<Item> EIGHT_BALL =  ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 

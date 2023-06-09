@@ -4,6 +4,9 @@
   "item.tutorialmod.eight_ball": "Eight Ball",
   "item.tutorialmod.blueberry": "Blueberry",
   "item.tutorialmod.blueberry_seeds": "Blueberry Seeds",
+  "item.tutorialmod.iron_pill": "Iron Pill",
+  "item.tutorialmod.fish_oil": "Fish Oil",
+  "item.tutorialmod.healing_paste": "Healing Paste",
 
 
   "block.tutorialmod.zircon_block": "Block of Zircon",
@@ -12,8 +15,10 @@
   "block.tutorialmod.zircon_lamp": "Zircon Lamp",
   "block.tutorialmod.experience_ice": "Experience Ice",
   "block.tutorialmod.blueberry_crop": "Blueberry Crop",
+  "block.tutorialmod.food_table": "Food Table",
 
 
 
-  "itemGroup.tutorial_tab": "Zircon Tutorial Tab"
+  "itemGroup.tutorial_tab": "Zircon Tutorial Tab",
+  "entity.minecraft.villager.tutorialmod.food_master": "Food Master"
 }
