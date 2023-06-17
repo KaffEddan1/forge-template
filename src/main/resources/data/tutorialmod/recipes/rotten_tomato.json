@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tutorialmod:tomato"
+    }
+  ],
+  "result": {
+    "item": "tutorialmod:rotten_tomato"
+  }
+}

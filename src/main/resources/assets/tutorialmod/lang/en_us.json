@@ -4,6 +4,11 @@
   "item.tutorialmod.eight_ball": "Eight Ball",
   "item.tutorialmod.blueberry": "Blueberry",
   "item.tutorialmod.blueberry_seeds": "Blueberry Seeds",
+  "item.tutorialmod.tomato": "Tomato",
+  "item.tutorialmod.rotten_tomato": "Rotten Tomato",
+  "item.tutorialmod.holy_rotten_tomato": "Holy Rotten Tomato",
+  "item.tutorialmod.tomato_seeds": "Tomato Seeds",
+  "item.tutorialmod.worm": "Worm",
   "item.tutorialmod.iron_pill": "Iron Pill",
   "item.tutorialmod.fish_oil": "Fish Oil",
   "item.tutorialmod.healing_paste": "Healing Paste",
@@ -13,8 +18,10 @@
   "block.tutorialmod.zircon_ore": "Zircon Ore",
   "block.tutorialmod.deepslate_zircon_ore": "Deepslate Zircon Ore",
   "block.tutorialmod.zircon_lamp": "Zircon Lamp",
-  "block.tutorialmod.experience_ice": "Experience Ice",
+  "block.tutorialmod.schmutz_block": "Schmutz Block",
   "block.tutorialmod.blueberry_crop": "Blueberry Crop",
+  "block.tutorialmod.tomato_crop": "Tomato Crop",
+  "block.tutorialmod.george_crop": "George",
   "block.tutorialmod.food_table": "Food Table",
 
 

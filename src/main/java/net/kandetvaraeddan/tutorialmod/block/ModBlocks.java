@@ -2,6 +2,8 @@ package net.kandetvaraeddan.tutorialmod.block;
 
 import net.kandetvaraeddan.tutorialmod.TutorialMod;
 import net.kandetvaraeddan.tutorialmod.block.custom.BlueberryCropBlock;
+import net.kandetvaraeddan.tutorialmod.block.custom.GeorgeCropBlock;
+import net.kandetvaraeddan.tutorialmod.block.custom.TomatoCropBlock;
 import net.kandetvaraeddan.tutorialmod.item.ModCreativeModeTab;
 import net.kandetvaraeddan.tutorialmod.item.ModItems;
 import net.kandetvaraeddan.tutorialmod.block.custom.ZirconLampBlock;
@@ -36,15 +38,17 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
-            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
-                    .strength(6f)
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(6f)
                     .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.TUTORIAL_TAB);
-    public static final RegistryObject<Block> EXPERIENCE_ICE_BLOCK = registerBlock("experience_ice",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.ICE)
-                    .requiresCorrectToolForDrops().strength(0.5f),
+    public static final RegistryObject<Block> SCHMUTZ_BLOCK = registerBlock("schmutz_block",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.DIRT).strength(1f),
                     UniformInt.of(8, 17)), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
+            () -> new TomatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> GEORGE_CROP = BLOCKS.register("george_crop",
+            () -> new GeorgeCropBlock(BlockBehaviour.Properties.copy(Blocks.PUMPKIN_STEM)));
     public static final RegistryObject<Block> FOOD_TABLE = registerBlock("food_table",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops()
                     .strength(2f)), ModCreativeModeTab.TUTORIAL_TAB);

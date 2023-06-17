@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "tutorialmod:block/experience_ice"
+    "all": "tutorialmod:block/schmutz_block"
   }
 }
