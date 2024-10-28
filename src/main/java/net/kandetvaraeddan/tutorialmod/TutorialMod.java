@@ -2,11 +2,12 @@ package net.kandetvaraeddan.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.kandetvaraeddan.tutorialmod.block.ModBlocks;
+import net.kandetvaraeddan.tutorialmod.entity.ModEntityTypes;
+import net.kandetvaraeddan.tutorialmod.entity.client.RaccoonRenderer;
 import net.kandetvaraeddan.tutorialmod.item.ModItems;
 import net.kandetvaraeddan.tutorialmod.painting.ModPaintings;
 import net.kandetvaraeddan.tutorialmod.villager.ModVillagers;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 @Mod(TutorialMod.MOD_ID)
 public class TutorialMod {
@@ -25,9 +27,12 @@ public class TutorialMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
+
+        ModEntityTypes.register(modEventBus);
+
+        GeckoLib.initialize();
 
         modEventBus.addListener(this::commonSetup);
 
@@ -45,6 +50,7 @@ public class TutorialMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
         }
     }
 }

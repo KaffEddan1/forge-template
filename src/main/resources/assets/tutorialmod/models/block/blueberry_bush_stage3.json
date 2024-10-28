@@ -2,6 +2,6 @@
   "parent": "minecraft:block/crop",
   "render_type": "cutout",
   "textures": {
-    "crop": "tutorialmod:block/george_stage2"
+    "crop": "tutorialmod:block/blueberry_bush_stage3"
   }
 }

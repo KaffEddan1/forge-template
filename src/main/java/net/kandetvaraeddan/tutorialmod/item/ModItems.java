@@ -2,12 +2,13 @@ package net.kandetvaraeddan.tutorialmod.item;
 
 import net.kandetvaraeddan.tutorialmod.TutorialMod;
 import net.kandetvaraeddan.tutorialmod.block.ModBlocks;
+import net.kandetvaraeddan.tutorialmod.entity.ModEntityTypes;
 import net.kandetvaraeddan.tutorialmod.item.custom.EightBallItem;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,8 +26,8 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_CROP.get(),
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> BLUEBERRY =  ITEMS.register("blueberry",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
-                    .food(new FoodProperties.Builder().nutrition(1).saturationMod(1f).build())));
+            () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get() ,new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
+                    .food(new FoodProperties.Builder().nutrition(1).fast().saturationMod(1f).build())));
     public static final RegistryObject<Item> TOMATO_SEEDS =  ITEMS.register("tomato_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(),
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
@@ -37,9 +38,6 @@ public class ModItems {
             () -> new SnowballItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> HOLY_ROTTEN_TOMATO =  ITEMS.register("holy_rotten_tomato",
             () -> new EnderEyeItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
-    public static final RegistryObject<Item> WORM =  ITEMS.register("worm",
-            () -> new ItemNameBlockItem(ModBlocks.GEORGE_CROP.get(),
-                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> IRON_PILL =  ITEMS.register("iron_pill",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
                     .food(new FoodProperties.Builder().effect(new MobEffectInstance(MobEffects.REGENERATION, 40), 40)
@@ -55,6 +53,9 @@ public class ModItems {
                     .nutrition(1).saturationMod(1f).build())));
     public static final RegistryObject<Item> EIGHT_BALL =  ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> RACCOON_SPAWN_EGG = ITEMS.register("raccoon_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.RACCOON, 0x948e8d, 0x3b3635,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
 

@@ -1,8 +1,12 @@
 {
   "type": "minecraft:block",
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
   "pools": [
     {
-      "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
@@ -27,10 +31,10 @@
             }
           ]
         }
-      ]
+      ],
+      "rolls": 1.0
     },
     {
-      "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
@@ -49,6 +53,7 @@
           "name": "tutorialmod:tomato_seeds"
         }
       ],
+      "rolls": 1.0,
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
@@ -58,11 +63,6 @@
           }
         }
       ]
-    }
-  ],
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
     }
   ]
 }

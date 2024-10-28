@@ -1,8 +1,8 @@
 package net.kandetvaraeddan.tutorialmod.block;
 
 import net.kandetvaraeddan.tutorialmod.TutorialMod;
+import net.kandetvaraeddan.tutorialmod.block.custom.BlueberryBushBlock;
 import net.kandetvaraeddan.tutorialmod.block.custom.BlueberryCropBlock;
-import net.kandetvaraeddan.tutorialmod.block.custom.GeorgeCropBlock;
 import net.kandetvaraeddan.tutorialmod.block.custom.TomatoCropBlock;
 import net.kandetvaraeddan.tutorialmod.item.ModCreativeModeTab;
 import net.kandetvaraeddan.tutorialmod.item.ModItems;
@@ -45,10 +45,11 @@ public class ModBlocks {
                     UniformInt.of(8, 17)), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush",
+            () -> new BlueberryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+
     public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
             () -> new TomatoCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
-    public static final RegistryObject<Block> GEORGE_CROP = BLOCKS.register("george_crop",
-            () -> new GeorgeCropBlock(BlockBehaviour.Properties.copy(Blocks.PUMPKIN_STEM)));
     public static final RegistryObject<Block> FOOD_TABLE = registerBlock("food_table",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops()
                     .strength(2f)), ModCreativeModeTab.TUTORIAL_TAB);

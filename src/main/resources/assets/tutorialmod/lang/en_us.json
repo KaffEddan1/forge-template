@@ -8,10 +8,10 @@
   "item.tutorialmod.rotten_tomato": "Rotten Tomato",
   "item.tutorialmod.holy_rotten_tomato": "Holy Rotten Tomato",
   "item.tutorialmod.tomato_seeds": "Tomato Seeds",
-  "item.tutorialmod.worm": "Worm",
   "item.tutorialmod.iron_pill": "Iron Pill",
   "item.tutorialmod.fish_oil": "Fish Oil",
   "item.tutorialmod.healing_paste": "Healing Paste",
+  "item.tutorialmod.raccoon_spawn_egg": "Raccoon Spawn Egg",
 
 
   "block.tutorialmod.zircon_block": "Block of Zircon",
@@ -20,12 +20,12 @@
   "block.tutorialmod.zircon_lamp": "Zircon Lamp",
   "block.tutorialmod.schmutz_block": "Schmutz Block",
   "block.tutorialmod.blueberry_crop": "Blueberry Crop",
+  "block.tutorialmod.blueberry_bush": "Blueberry Bush",
   "block.tutorialmod.tomato_crop": "Tomato Crop",
-  "block.tutorialmod.george_crop": "George",
   "block.tutorialmod.food_table": "Food Table",
 
 
 
-  "itemGroup.tutorial_tab": "Zircon Tutorial Tab",
+  "itemGroup.tutorial_tab": "Eddie's Calming Chaos",
   "entity.minecraft.villager.tutorialmod.food_master": "Food Master"
 }
